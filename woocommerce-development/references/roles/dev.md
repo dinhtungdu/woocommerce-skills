@@ -1,0 +1,6 @@
+# dev lessons
+
+- D1 — When a requested change names a physical directory: move the directory and update its consumers; an import-alias change alone does not fulfill that outcome. Because PR #68952 passed focused tests and CI while the requested source directory remained unchanged. (2026-09-24, evidence)
+- D2 — When a test invokes a private method through ReflectionMethod: call setAccessible(true) for PHP 7.4 compatibility. PHP 8.1 allows the invocation without it and masked two failures in the 7.4 CI matrix. (2026-09-25, [CI job](https://github.com/woocommerce/woocommerce/actions/runs/36106245558/job/107981119891))
+- D3 — When using wc_get_page_id() values as page-search exclusions: discard -1/nonpositive IDs and reindex the list before AJAX; absint(-1) becomes 1 and can hide a real page. (2026-09-30, evidence)
+- D4 — When writing filter or range regression tests: require included and excluded fixtures and exact expected identities. Complete the discriminating regression proof (`references/verification/README.md#prove-regression-tests-discriminate` in the `woocommerce-verification` skill) before claiming coverage. PR #68870's decimal-maximum fixture caught truncation but still passed with filtering disabled. (2026-10-15, [review lesson](https://ampcode.com/threads/T-01a13b5f-6713-7704-a74d-0a71d17897c0))

@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+"""Entry point for the existing WooCommerce verification CLI."""
+from pathlib import Path
+import subprocess
+import sys
+
+
+def main():
+    root = Path(__file__).resolve().parent
+    args = sys.argv[1:]
+    if args in (["list"], ["--help"], ["-h"]):
+        return subprocess.call(["node", str(root / "woo-control.mjs"), *args])
+    if args and args[0] in ("doctor", "run") and "--browser" not in args:
+        raise ValueError("select --browser chrome or playwright explicitly")
+    return subprocess.call(["node", str(root / "woo-control.mjs"), *args])
+
+
+if __name__ == "__main__":
+    try:
+        sys.exit(main())
+    except (ValueError, OSError, KeyError) as error:
+        print("verify-woocommerce: " + str(error), file=sys.stderr)
+        sys.exit(1)

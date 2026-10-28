@@ -1,0 +1,619 @@
+{
+  "schema_version": 1,
+  "source": "plugins/woocommerce/tests/e2e/tests",
+  "verified_ref": "aa5308378124f891ed07d230085787ff11e11e97",
+  "candidates": [
+    {
+      "id": "accordion",
+      "title": "Accordion",
+      "specs": 1,
+      "tests": 2,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "accordion.md"
+    },
+    {
+      "id": "add-to-cart-form",
+      "title": "Add To Cart Form",
+      "specs": 1,
+      "tests": 6,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "add-to-cart-form.md"
+    },
+    {
+      "id": "add-to-cart-with-options",
+      "title": "Add To Cart With Options",
+      "specs": 2,
+      "tests": 17,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "add-to-cart-with-options.md"
+    },
+    {
+      "id": "all-products",
+      "title": "All Products",
+      "specs": 1,
+      "tests": 2,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "all-products.md"
+    },
+    {
+      "id": "all-reviews",
+      "title": "All Reviews",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "all-reviews.md"
+    },
+    {
+      "id": "analytics",
+      "title": "Analytics",
+      "specs": 3,
+      "tests": 19,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "analytics.md"
+    },
+    {
+      "id": "attributes-filter",
+      "title": "Attributes Filter",
+      "specs": 1,
+      "tests": 3,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "attributes-filter.md"
+    },
+    {
+      "id": "back-in-stock-notifications",
+      "title": "Back In Stock Notifications",
+      "specs": 7,
+      "tests": 35,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "back-in-stock-notifications.md"
+    },
+    {
+      "id": "basic",
+      "title": "Basic",
+      "specs": 2,
+      "tests": 2,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "basic.md"
+    },
+    {
+      "id": "brands",
+      "title": "Brands",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "brands.md"
+    },
+    {
+      "id": "breadcrumbs",
+      "title": "Breadcrumbs",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "breadcrumbs.md"
+    },
+    {
+      "id": "cart",
+      "title": "Cart",
+      "specs": 11,
+      "tests": 16,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "cart.md"
+    },
+    {
+      "id": "cart-store",
+      "title": "Cart Store",
+      "specs": 2,
+      "tests": 15,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "cart-store.md"
+    },
+    {
+      "id": "catalog-sorting",
+      "title": "Catalog Sorting",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "catalog-sorting.md"
+    },
+    {
+      "id": "checkout",
+      "title": "Checkout",
+      "specs": 12,
+      "tests": 33,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "checkout.md"
+    },
+    {
+      "id": "classic-template",
+      "title": "Classic Template",
+      "specs": 1,
+      "tests": 2,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "classic-template.md"
+    },
+    {
+      "id": "coupons",
+      "title": "Coupons",
+      "specs": 4,
+      "tests": 7,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "coupons.md"
+    },
+    {
+      "id": "customer",
+      "title": "Customer",
+      "specs": 1,
+      "tests": 3,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "customer.md"
+    },
+    {
+      "id": "editor",
+      "title": "Editor",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "editor.md"
+    },
+    {
+      "id": "email",
+      "title": "Email",
+      "specs": 6,
+      "tests": 14,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "email.md"
+    },
+    {
+      "id": "email-editor",
+      "title": "Email Editor",
+      "specs": 4,
+      "tests": 10,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "email-editor.md"
+    },
+    {
+      "id": "featured-category",
+      "title": "Featured Category",
+      "specs": 1,
+      "tests": 2,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "featured-category.md"
+    },
+    {
+      "id": "featured-product",
+      "title": "Featured Product",
+      "specs": 1,
+      "tests": 2,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "featured-product.md"
+    },
+    {
+      "id": "handpicked-products",
+      "title": "Handpicked Products",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "handpicked-products.md"
+    },
+    {
+      "id": "js-file-monitor",
+      "title": "JS File Monitor",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "js-file-monitor.md"
+    },
+    {
+      "id": "local-pickup",
+      "title": "Local Pickup",
+      "specs": 1,
+      "tests": 2,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "local-pickup.md"
+    },
+    {
+      "id": "marketing",
+      "title": "Marketing",
+      "specs": 1,
+      "tests": 2,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "marketing.md"
+    },
+    {
+      "id": "mini-cart",
+      "title": "Mini Cart",
+      "specs": 4,
+      "tests": 34,
+      "state": "test-verified",
+      "mapped": true,
+      "file": "mini-cart.md"
+    },
+    {
+      "id": "my-account",
+      "title": "My Account",
+      "specs": 5,
+      "tests": 5,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "my-account.md"
+    },
+    {
+      "id": "on-sale-badge",
+      "title": "On Sale Badge",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "on-sale-badge.md"
+    },
+    {
+      "id": "onboarding",
+      "title": "Onboarding",
+      "specs": 5,
+      "tests": 16,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "onboarding.md"
+    },
+    {
+      "id": "order",
+      "title": "Order",
+      "specs": 11,
+      "tests": 36,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "order.md"
+    },
+    {
+      "id": "page-content-wrapper",
+      "title": "Page Content Wrapper",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "page-content-wrapper.md"
+    },
+    {
+      "id": "patterns",
+      "title": "Patterns",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "patterns.md"
+    },
+    {
+      "id": "paypal",
+      "title": "Paypal",
+      "specs": 1,
+      "tests": 2,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "paypal.md"
+    },
+    {
+      "id": "price-filter",
+      "title": "Price Filter",
+      "specs": 1,
+      "tests": 4,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "price-filter.md"
+    },
+    {
+      "id": "product",
+      "title": "Product",
+      "specs": 18,
+      "tests": 48,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "product.md"
+    },
+    {
+      "id": "product-best-sellers",
+      "title": "Product Best Sellers",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "product-best-sellers.md"
+    },
+    {
+      "id": "product-button",
+      "title": "Product Button",
+      "specs": 2,
+      "tests": 2,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "product-button.md"
+    },
+    {
+      "id": "product-categories",
+      "title": "Product Categories",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "product-categories.md"
+    },
+    {
+      "id": "product-category",
+      "title": "Product Category",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "product-category.md"
+    },
+    {
+      "id": "product-collection",
+      "title": "Product Collection",
+      "specs": 9,
+      "tests": 38,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "product-collection.md"
+    },
+    {
+      "id": "product-filters",
+      "title": "Product Filters",
+      "specs": 8,
+      "tests": 15,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "product-filters.md"
+    },
+    {
+      "id": "product-gallery",
+      "title": "Product Gallery",
+      "specs": 3,
+      "tests": 17,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "product-gallery.md"
+    },
+    {
+      "id": "product-image-gallery",
+      "title": "Product Image Gallery",
+      "specs": 1,
+      "tests": 6,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "product-image-gallery.md"
+    },
+    {
+      "id": "product-new",
+      "title": "Product New",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "product-new.md"
+    },
+    {
+      "id": "product-on-sale",
+      "title": "Product On Sale",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "product-on-sale.md"
+    },
+    {
+      "id": "product-results-count",
+      "title": "Product Results Count",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "product-results-count.md"
+    },
+    {
+      "id": "product-tag",
+      "title": "Product Tag",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "product-tag.md"
+    },
+    {
+      "id": "product-top-rated",
+      "title": "Product Top Rated",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "product-top-rated.md"
+    },
+    {
+      "id": "products",
+      "title": "Products",
+      "specs": 1,
+      "tests": 3,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "products.md"
+    },
+    {
+      "id": "products-by-attribute",
+      "title": "Products By Attribute",
+      "specs": 1,
+      "tests": 2,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "products-by-attribute.md"
+    },
+    {
+      "id": "rating-filter",
+      "title": "Rating Filter",
+      "specs": 1,
+      "tests": 2,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "rating-filter.md"
+    },
+    {
+      "id": "related-products",
+      "title": "Related Products",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "related-products.md"
+    },
+    {
+      "id": "reviews-by-category",
+      "title": "Reviews By Category",
+      "specs": 1,
+      "tests": 2,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "reviews-by-category.md"
+    },
+    {
+      "id": "reviews-by-product",
+      "title": "Reviews By Product",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "reviews-by-product.md"
+    },
+    {
+      "id": "settings",
+      "title": "Settings",
+      "specs": 8,
+      "tests": 17,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "settings.md"
+    },
+    {
+      "id": "shipping",
+      "title": "Shipping",
+      "specs": 2,
+      "tests": 3,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "shipping.md"
+    },
+    {
+      "id": "shop",
+      "title": "Shop",
+      "specs": 2,
+      "tests": 5,
+      "state": "test-verified",
+      "mapped": true,
+      "file": "shop.md"
+    },
+    {
+      "id": "single-product-template",
+      "title": "Single Product Template",
+      "specs": 3,
+      "tests": 5,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "single-product-template.md"
+    },
+    {
+      "id": "site-editor",
+      "title": "Site Editor",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "site-editor.md"
+    },
+    {
+      "id": "stock-filter",
+      "title": "Stock Filter",
+      "specs": 1,
+      "tests": 2,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "stock-filter.md"
+    },
+    {
+      "id": "store-notices",
+      "title": "Store Notices",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "store-notices.md"
+    },
+    {
+      "id": "templates",
+      "title": "Templates",
+      "specs": 13,
+      "tests": 12,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "templates.md"
+    },
+    {
+      "id": "user",
+      "title": "User",
+      "specs": 2,
+      "tests": 5,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "user.md"
+    },
+    {
+      "id": "utils",
+      "title": "Utils",
+      "specs": 1,
+      "tests": 2,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "utils.md"
+    },
+    {
+      "id": "widget-area",
+      "title": "Widget Area",
+      "specs": 1,
+      "tests": 1,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "widget-area.md"
+    },
+    {
+      "id": "wp-core",
+      "title": "WordPress Core",
+      "specs": 3,
+      "tests": 3,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "wp-core.md"
+    }
+  ]
+}

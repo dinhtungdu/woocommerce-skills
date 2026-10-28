@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "target_accepted_runs": 3,
+  "accepted_runs": [
+    {
+      "task_id": "wc-61093-product-filter-overlay-controls",
+      "run_id": "prepare-pr-14",
+      "completed_at": "2026-08-14T07:27:29.077Z",
+      "metrics": {
+        "elapsed_ms": 1123117,
+        "instruction_revisions": 0,
+        "preflight_failures": 4,
+        "recording_attempts": 1,
+        "rework_events": 5,
+        "reused_primitives": 6,
+        "available_primitives": 7,
+        "rejected_assertions": 8
+      }
+    },
+    {
+      "task_id": "wc-67498-front-page-filters-design",
+      "run_id": "prepare-pr-1",
+      "completed_at": "2026-08-18T06:54:31.364Z",
+      "metrics": {
+        "elapsed_ms": 857475,
+        "instruction_revisions": 0,
+        "preflight_failures": 5,
+        "recording_attempts": 1,
+        "rework_events": 5,
+        "reused_primitives": 6,
+        "available_primitives": 7,
+        "rejected_assertions": 2
+      }
+    },
+    {
+      "task_id": "wc-61093-product-filter-overlay-controls",
+      "run_id": "prepare-pr-52",
+      "completed_at": "2026-08-24T08:53:47.310Z",
+      "metrics": {
+        "elapsed_ms": 1574899,
+        "instruction_revisions": 0,
+        "preflight_failures": 4,
+        "recording_attempts": 1,
+        "rework_events": 7,
+        "reused_primitives": 6,
+        "available_primitives": 7,
+        "rejected_assertions": 6
+      }
+    }
+  ],
+  "evaluation": {
+    "elapsed": "No sustained improvement: 18.7, 14.3, then 26.2 minutes.",
+    "retries": "Final recording attempts stayed at one; preflight failures were 4, 5, then 4.",
+    "assertion_rejection": "No sustained improvement: 8, 2, then 6 assertions rejected.",
+    "primitive_reuse": "Stable, not improved: 6 of 7 primitives in every run.",
+    "action": "Trial complete; stop appending runs rather than extending tracking that showed no improvement. Keep the required per-run evidence contract."
+  }
+}

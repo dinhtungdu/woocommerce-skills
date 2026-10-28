@@ -1,0 +1,10 @@
+# reviewer lessons
+
+- R1 — When review acceptance includes a filesystem layout: inspect the exact tree as well as aliases, builds, and tests. Because PR #68952's green CI validated behavior but not the requested directory rename. (2026-09-24, evidence)
+- R2 — When reviewing Product Filters price formatting: inspect both PHP initial state and private JS formatter after hydration; either can independently render the visible amount. Because Issue #67818 exercised server and hydrated prices separately. (2026-09-25, evidence)
+- R3 — When reviewing Product Filter taxonomy URL vars: check names come from Params, not hard-coded categories/tags/brands. The taxonomy parameter map can be renamed via woocommerce_product_filter_taxonomy_params, and get_param_keys() exposes effective names. (2026-09-24, evidence)
+- R4 — When reviewing responsive image changes, compare `sizes` to the rendered slot at DPR 1 and 2; registered `srcset` candidates alone do not prove efficient selection. PR #69115 chose 300px/600px files for a 48–54px review image. (2026-09-28, evidence)
+- R5 — When a block event claims classic parity, test default-selected hydration separately from user changes. PR #69032 emitted resolved/default changes but suppressed the initial resolved variation unlike classic. (2026-09-28, evidence)
+- R6 — When section copy summarizes selectable options: check every distinct option, not only newly added ones. Because Cart and Checkout are separate Advanced → Page setup selections. (2026-09-29, evidence)
+- R7 — When an AJAX exclusion list comes from wc_get_page_id(): trace unset -1 through absint() and check list reindexing. Unset IDs otherwise become page 1 and filtering may JSON-encode sparse lists as objects. (2026-09-30, evidence)
+- R8 — When reviewing deletion of a multisite test: name its exact blog switch and assertions, not broader cross-site isolation it did not exercise. The return-policy test checked site B's link and site A's option but never generated markup on both sites sequentially. (2026-09-30, evidence)
