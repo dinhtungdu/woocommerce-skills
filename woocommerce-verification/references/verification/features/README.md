@@ -14,6 +14,6 @@ Compact, verified user-surface memory for issue implementation. Read only the fe
 
 ## Test-verified features
 
-The [test-verified index](test-verified/README.md) contains 69 feature groups harvested from 201 WooCommerce Playwright specs on CI-gated trunk revision `4b6278b7a906da3b102c39b8a70a04ef5233d056`. They provide source tests, routes, titles, and steps, and verify the behavior those tests assert. Assigned-site verification is required only for visual or manual behavior, mocks, environment differences, or claims outside those assertions.
+The [test-verified index](test-verified/README.md) contains 68 feature groups harvested from 200 WooCommerce Playwright specs on CI-gated trunk revision `4b6278b7a906da3b102c39b8a70a04ef5233d056`. They provide source tests, routes, titles, and steps, and verify the behavior those tests assert. Assigned-site verification is required only for visual or manual behavior, mocks, environment differences, or claims outside those assertions.
 
 After each successful live verification, the task checks whether this map remains accurate and proposes any missing or stale entry with its evidence. The weekly learning routine publishes accepted proposals; tasks never edit this map directly. Keep issue-specific selectors, fixtures, and conclusions in task artifacts rather than this map.

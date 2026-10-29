@@ -85,15 +85,6 @@
       "file": "basic.md"
     },
     {
-      "id": "blocks",
-      "title": "Blocks",
-      "specs": 1,
-      "tests": 2,
-      "state": "test-verified",
-      "mapped": false,
-      "file": "blocks.md"
-    },
-    {
       "id": "brands",
       "title": "Brands",
       "specs": 1,

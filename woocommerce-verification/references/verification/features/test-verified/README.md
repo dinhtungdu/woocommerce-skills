@@ -13,7 +13,6 @@ Generated from `plugins/woocommerce/tests/e2e/tests`. The cited tests are commit
 | [Attributes Filter](attributes-filter.md) | 1 | 3 | test-verified |
 | [Back In Stock Notifications](back-in-stock-notifications.md) | 7 | 35 | test-verified |
 | [Basic](basic.md) | 2 | 4 | test-verified |
-| [Blocks](blocks.md) | 1 | 2 | test-verified |
 | [Brands](brands.md) | 1 | 1 | test-verified |
 | [Breadcrumbs](breadcrumbs.md) | 1 | 1 | test-verified |
 | [Cart](cart.md) | 11 | 35 | test-verified |
