@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source": "plugins/woocommerce/tests/e2e/tests",
-  "verified_ref": "aa5308378124f891ed07d230085787ff11e11e97",
+  "verified_ref": "4b6278b7a906da3b102c39b8a70a04ef5233d056",
   "candidates": [
     {
       "id": "accordion",
@@ -51,8 +51,8 @@
     {
       "id": "analytics",
       "title": "Analytics",
-      "specs": 3,
-      "tests": 19,
+      "specs": 4,
+      "tests": 10,
       "state": "test-verified",
       "mapped": false,
       "file": "analytics.md"
@@ -79,10 +79,19 @@
       "id": "basic",
       "title": "Basic",
       "specs": 2,
-      "tests": 2,
+      "tests": 4,
       "state": "test-verified",
       "mapped": false,
       "file": "basic.md"
+    },
+    {
+      "id": "blocks",
+      "title": "Blocks",
+      "specs": 1,
+      "tests": 2,
+      "state": "test-verified",
+      "mapped": false,
+      "file": "blocks.md"
     },
     {
       "id": "brands",
@@ -106,7 +115,7 @@
       "id": "cart",
       "title": "Cart",
       "specs": 11,
-      "tests": 16,
+      "tests": 35,
       "state": "test-verified",
       "mapped": false,
       "file": "cart.md"
@@ -114,8 +123,8 @@
     {
       "id": "cart-store",
       "title": "Cart Store",
-      "specs": 2,
-      "tests": 15,
+      "specs": 3,
+      "tests": 19,
       "state": "test-verified",
       "mapped": false,
       "file": "cart-store.md"
@@ -132,8 +141,8 @@
     {
       "id": "checkout",
       "title": "Checkout",
-      "specs": 12,
-      "tests": 33,
+      "specs": 13,
+      "tests": 55,
       "state": "test-verified",
       "mapped": false,
       "file": "checkout.md"
@@ -186,8 +195,8 @@
     {
       "id": "email-editor",
       "title": "Email Editor",
-      "specs": 4,
-      "tests": 10,
+      "specs": 6,
+      "tests": 15,
       "state": "test-verified",
       "mapped": false,
       "file": "email-editor.md"
@@ -232,7 +241,7 @@
       "id": "local-pickup",
       "title": "Local Pickup",
       "specs": 1,
-      "tests": 2,
+      "tests": 7,
       "state": "test-verified",
       "mapped": false,
       "file": "local-pickup.md"
@@ -249,7 +258,7 @@
     {
       "id": "mini-cart",
       "title": "Mini Cart",
-      "specs": 4,
+      "specs": 5,
       "tests": 34,
       "state": "test-verified",
       "mapped": true,
@@ -259,7 +268,7 @@
       "id": "my-account",
       "title": "My Account",
       "specs": 5,
-      "tests": 5,
+      "tests": 6,
       "state": "test-verified",
       "mapped": false,
       "file": "my-account.md"
@@ -277,7 +286,7 @@
       "id": "onboarding",
       "title": "Onboarding",
       "specs": 5,
-      "tests": 16,
+      "tests": 20,
       "state": "test-verified",
       "mapped": false,
       "file": "onboarding.md"
@@ -286,7 +295,7 @@
       "id": "order",
       "title": "Order",
       "specs": 11,
-      "tests": 36,
+      "tests": 46,
       "state": "test-verified",
       "mapped": false,
       "file": "order.md"
@@ -295,7 +304,7 @@
       "id": "page-content-wrapper",
       "title": "Page Content Wrapper",
       "specs": 1,
-      "tests": 1,
+      "tests": 2,
       "state": "test-verified",
       "mapped": false,
       "file": "page-content-wrapper.md"
@@ -322,7 +331,7 @@
       "id": "price-filter",
       "title": "Price Filter",
       "specs": 1,
-      "tests": 4,
+      "tests": 5,
       "state": "test-verified",
       "mapped": false,
       "file": "price-filter.md"
@@ -330,8 +339,8 @@
     {
       "id": "product",
       "title": "Product",
-      "specs": 18,
-      "tests": 48,
+      "specs": 19,
+      "tests": 51,
       "state": "test-verified",
       "mapped": false,
       "file": "product.md"
@@ -349,7 +358,7 @@
       "id": "product-button",
       "title": "Product Button",
       "specs": 2,
-      "tests": 2,
+      "tests": 4,
       "state": "test-verified",
       "mapped": false,
       "file": "product-button.md"
@@ -376,7 +385,7 @@
       "id": "product-collection",
       "title": "Product Collection",
       "specs": 9,
-      "tests": 38,
+      "tests": 67,
       "state": "test-verified",
       "mapped": false,
       "file": "product-collection.md"
@@ -385,7 +394,7 @@
       "id": "product-filters",
       "title": "Product Filters",
       "specs": 8,
-      "tests": 15,
+      "tests": 21,
       "state": "test-verified",
       "mapped": false,
       "file": "product-filters.md"
@@ -502,7 +511,7 @@
       "id": "reviews-by-product",
       "title": "Reviews By Product",
       "specs": 1,
-      "tests": 1,
+      "tests": 2,
       "state": "test-verified",
       "mapped": false,
       "file": "reviews-by-product.md"
@@ -520,7 +529,7 @@
       "id": "shipping",
       "title": "Shipping",
       "specs": 2,
-      "tests": 3,
+      "tests": 5,
       "state": "test-verified",
       "mapped": false,
       "file": "shipping.md"
@@ -574,7 +583,7 @@
       "id": "templates",
       "title": "Templates",
       "specs": 13,
-      "tests": 12,
+      "tests": 11,
       "state": "test-verified",
       "mapped": false,
       "file": "templates.md"

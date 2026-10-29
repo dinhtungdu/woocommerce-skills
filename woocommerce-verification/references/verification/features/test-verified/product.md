@@ -1,6 +1,6 @@
 # Product
 
-> Status: test-verified on CI-gated trunk revision `aa5308378124f891ed07d230085787ff11e11e97`. The cited tests verify the behavior they assert.
+> Status: test-verified on CI-gated trunk revision `4b6278b7a906da3b102c39b8a70a04ef5233d056`. The cited tests verify the behavior they assert.
 
 ## Sub-features
 
@@ -12,6 +12,7 @@
 - Merchant manages reviews
 - Product > Export Selected Products
 - Product Reviews
+- Product customs fields
 - Products > Product Images
 - Products > Related products
 - Products > Search and View a product
@@ -33,7 +34,6 @@
 - can create a simple ${ productType } product
 - can create a variable product
 - can create attribute terms from the attributes modal
-- can delete all variations
 
 ## How to get to it (user POV)
 
@@ -66,6 +66,7 @@ Source specs:
 - `plugins/woocommerce/tests/e2e/tests/product/create-variable-product.spec.ts`
 - `plugins/woocommerce/tests/e2e/tests/product/create-variations.spec.ts`
 - `plugins/woocommerce/tests/e2e/tests/product/product-create-simple.spec.ts`
+- `plugins/woocommerce/tests/e2e/tests/product/product-customs.spec.ts`
 - `plugins/woocommerce/tests/e2e/tests/product/product-delete.spec.ts`
 - `plugins/woocommerce/tests/e2e/tests/product/product-edit.spec.ts`
 - `plugins/woocommerce/tests/e2e/tests/product/product-export.spec.ts`

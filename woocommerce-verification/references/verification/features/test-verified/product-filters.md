@@ -1,6 +1,6 @@
 # Product Filters
 
-> Status: test-verified on CI-gated trunk revision `aa5308378124f891ed07d230085787ff11e11e97`. The cited tests verify the behavior they assert.
+> Status: test-verified on CI-gated trunk revision `4b6278b7a906da3b102c39b8a70a04ef5233d056`. The cited tests verify the behavior they assert.
 
 ## Sub-features
 
@@ -12,6 +12,12 @@
 - woocommerce/product-filter-active - Frontend
 - woocommerce/product-filter-attribute - Frontend
 - woocommerce/product-filters - Frontend
+- Dropdown Core colors and borders override theme CSS and preserve separate corners
+- Dropdown defaults allow theme CSS overrides in either load order
+- Dropdown inherits and updates the ancestor background without explicit colors
+- Dropdown summary retains active selections hidden by another filter
+- Dropdown updates results on each checkbox selection and supports keyboard dismissal
+- Escape dismisses the Dropdown before the filter overlay
 - On mobile, overlay can be open and close.
 - With attribute filters applied it shows the correct active filters
 - With price filters applied it shows the correct active filters

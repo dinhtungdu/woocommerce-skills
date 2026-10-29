@@ -1,6 +1,6 @@
 # My Account
 
-> Status: test-verified on CI-gated trunk revision `aa5308378124f891ed07d230085787ff11e11e97`. The cited tests verify the behavior they assert.
+> Status: test-verified on CI-gated trunk revision `4b6278b7a906da3b102c39b8a70a04ef5233d056`. The cited tests verify the behavior they assert.
 
 ## Sub-features
 
@@ -14,6 +14,7 @@
 - can add billing address from my account
 - can create a new account via my account
 - can see downloadable file and click to download it
+- shows the temporary password reminder on My Account after registration
 
 ## How to get to it (user POV)
 

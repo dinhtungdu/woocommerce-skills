@@ -1,17 +1,17 @@
 # Mini Cart
 
-> Status: test-verified on CI-gated trunk revision `aa5308378124f891ed07d230085787ff11e11e97`. The cited tests verify the behavior they assert.
+> Status: test-verified on CI-gated trunk revision `4b6278b7a906da3b102c39b8a70a04ef5233d056`. The cited tests verify the behavior they assert.
 
 ## Sub-features
 
 - ${ blockData.name } Block
 - ${ blockData.name } Block (admin)
-- ${ blockData.name } Block (item data - hidden trailing entries)
-- ${ blockData.name } Block (item data - malformed trailing entries)
-- ${ blockData.name } Block (item data - mixed trailing entries)
-- ${ blockData.name } Block (item data)
 - ${ blockData.name } Block (variation attributes)
 - Merchant → Mini Cart
+- Mini-Cart Block (item data - hidden trailing entries)
+- Mini-Cart Block (item data - malformed trailing entries)
+- Mini-Cart Block (item data - mixed trailing entries)
+- Mini-Cart Block (item data)
 - Mini-Cart: classic theme
 - Shopper → Notices
 - Shopper → Tax
@@ -46,6 +46,7 @@ Source specs:
 
 - `plugins/woocommerce/tests/e2e/tests/blocks/mini-cart/mini-cart-block.merchant.block_theme.spec.ts`
 - `plugins/woocommerce/tests/e2e/tests/blocks/mini-cart/mini-cart-block.shopper.block_theme.spec.ts`
+- `plugins/woocommerce/tests/e2e/tests/blocks/mini-cart/mini-cart-item-data.block_theme.spec.ts`
 - `plugins/woocommerce/tests/e2e/tests/blocks/mini-cart/mini-cart.block_theme.spec.ts`
 - `plugins/woocommerce/tests/e2e/tests/blocks/mini-cart/mini-cart.classic_theme.spec.ts`
 

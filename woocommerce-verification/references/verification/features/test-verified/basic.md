@@ -1,16 +1,19 @@
 # Basic
 
-> Status: test-verified on CI-gated trunk revision `aa5308378124f891ed07d230085787ff11e11e97`. The cited tests verify the behavior they assert.
+> Status: test-verified on CI-gated trunk revision `4b6278b7a906da3b102c39b8a70a04ef5233d056`. The cited tests verify the behavior they assert.
 
 ## Sub-features
 
 - Customer-role users are blocked from accessing the WP Dashboard.
 - Customer is redirected from ${ description } back to the My Account page.
 - can load ${ currentPage.name } pages
+- can load the legacy Reports page directly
+- hides the legacy Reports menu item on a new store
 
 ## How to get to it (user POV)
 
-- Derive the user entry point from the source specs during live verification.
+- Candidate route: `wp-admin/admin.php?page=wc-reports`
+- Candidate route: `wp-admin/admin.php?page=wc-settings`
 
 ## Driving it with Playwright
 

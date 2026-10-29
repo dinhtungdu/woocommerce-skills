@@ -1,6 +1,6 @@
 # Cart
 
-> Status: test-verified on CI-gated trunk revision `aa5308378124f891ed07d230085787ff11e11e97`. The cited tests verify the behavior they assert.
+> Status: test-verified on CI-gated trunk revision `4b6278b7a906da3b102c39b8a70a04ef5233d056`. The cited tests verify the behavior they assert.
 
 ## Sub-features
 
@@ -14,22 +14,26 @@
 - Shopper → Shipping
 - Shopper → Taxes
 - Shopper → Translations
+- 1. With shipping methods for the default location, shipping methods for _any_ location, and local pickup enabled, the shopper sees shipping rates and pickup options - rates are selected default
+- 10. With shipping methods for the default location, no shipping methods for _any_ other location, local pickup disabled, and shipping costs require address enabled, the shopper sees shipping rates only after entering an address
+- 12. With no shipping methods for the default location, no shipping methods for _any_ other location, local pickup disabled, and shipping requires address enabled the shopper sees no shipping and no pickup rates
+- 2. With shipping methods for the default location, shipping methods for _any_ location, local pickup disabled, and shipping costs requires address disabled, the shopper sees shipping rates only
+- 4. With shipping methods for the default location, no shipping methods for _any_ other location, local pickup disabled, and shipping costs require address disabled, the shopper sees shipping rates only after entering an address
+- 6. With no shipping methods for the default location, but shipping methods for _any_ other location, local pickup disabled, and shipping costs require address disabled, the shopper sees shipping rates only after entering an address
+- 7. With no shipping methods for the default location, no shipping methods for _any_ other location, local pickup enabled the shopper sees local pickup rates only
+- 8. With no shipping methods for the default location, no shipping methods for _any_ other location, local pickup disabled the shopper sees no shipping and no pickup rates
+- 9. With shipping methods for the default location, shipping methods for _any_ other location, local pickup disabled and shipping requires address enabled, shopper sees shipping rates immediately.
+- Custom error code creates exception
+- Guest user does not see shipping rates until full address is entered
+- Invalid callback namespace creates notice
 - Logged in user can apply single-use coupon and place order
+- Logged in user cannot apply single-use coupon twice
 - Merchant can hide shipping costs before address is entered
-- Shopper can switch between shipping and local pickup while preserving the effective selected rate
-- Shopper sees no matching rates until a complete address reveals the zone rate
-- User can add, update, remove, and proceed from the cart
+- Products with updated prices should not display a discount label
+- The discount label is only visible next to the discounted product
+- User can proceed to checkout
+- User can remove a product from cart
 - User can see Cross-Sells products block
-- User can update product quantity
-- User can view translated Cart block
-- User can view translated Checkout block
-- can add and remove products, increase quantity and proceed to checkout - ${ name }
-- can undo product removal in classic cart
-- coupon inline notice is visible
-- custom block notice templates, except for coupon errors, are visible by template overwrite
-- default block notice templates, except for coupon errors, are visible by filter
-- should be able to navigate and remove item from mini cart using keyboard
-- should refresh nonce from Store API and use it for cart mutations
 
 ## How to get to it (user POV)
 
@@ -54,9 +58,6 @@ Source specs:
 
 Candidate test steps:
 
-- Add product to cart and open mini cart
-- Verify and interact with remove button
-- Verify cart is empty
 - add product to cart
 - can add another product to cart
 - can increase quantity

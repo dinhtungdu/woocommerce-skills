@@ -1,11 +1,12 @@
 # Products
 
-> Status: test-verified on CI-gated trunk revision `aa5308378124f891ed07d230085787ff11e11e97`. The cited tests verify the behavior they assert.
+> Status: test-verified on CI-gated trunk revision `4b6278b7a906da3b102c39b8a70a04ef5233d056`. The cited tests verify the behavior they assert.
 
 ## Sub-features
 
 - ${ blockData.name } Block
 - ${ templateTitle } template
+- ${ templateTitle } template, Products block
 - Product Collection matches with classic template block
 - product button should add product to the cart when inheriting query from template
 - when Inherits Query From Template other options are hidden, show up otherwise

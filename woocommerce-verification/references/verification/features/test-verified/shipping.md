@@ -1,12 +1,14 @@
 # Shipping
 
-> Status: test-verified on CI-gated trunk revision `aa5308378124f891ed07d230085787ff11e11e97`. The cited tests verify the behavior they assert.
+> Status: test-verified on CI-gated trunk revision `4b6278b7a906da3b102c39b8a70a04ef5233d056`. The cited tests verify the behavior they assert.
 
 ## Sub-features
 
 - can delete the shipping zone method
 - can delete the shipping zone region
+- persists pending zone edits when adding a non-modal method to an existing zone
 - saves an unsaved shipping zone when adding a method
+- saves an unsaved shipping zone when adding a non-modal method
 
 ## How to get to it (user POV)
 

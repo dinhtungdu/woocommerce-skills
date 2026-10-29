@@ -1,12 +1,14 @@
 # Product Collection
 
-> Status: test-verified on CI-gated trunk revision `aa5308378124f891ed07d230085787ff11e11e97`. The cited tests verify the behavior they assert.
+> Status: test-verified on CI-gated trunk revision `4b6278b7a906da3b102c39b8a70a04ef5233d056`. The cited tests verify the behavior they assert.
 
 ## Sub-features
 
+- ${ collection.name }
 - ${ templateTitle } template
 - Collection switching
 - Hand-Picked Products
+- Have hidden implementation in UI
 - My Custom Collection
 - My Custom Collection with Advanced Preview
 - My Custom Collection with Preview
@@ -20,20 +22,18 @@
 - Product Collection: Product Picker
 - Product Collection: Register Product Collection
 - Product Page: error notices
-- Products by Category
 - Related Products collection
 - Responsive
 - With other blocks
 - default query can be modified
 - wc-blocks_viewed_product is emitted
+- Best Sellers
+- Best Sellers collection can be added and displays proper products
 - Block with shrink columns DISABLED collapses to single column on small screens
 - Block with shrink columns ENABLED correctly displays as grid
 - Can be migrated to from Products (Deprecated) block
-- Choose collection button visibility for different scopes
-- Empty collection renders nothing, and No Results renders where that block is present
-- In Single Product block
-- On Sale Products collection should be visible after Refresh
-- On Sale Products collection should be visible after Refresh in a Post
+- Can select ${ collection.termName } and Done button becomes enabled
+- Can select multiple products and Done button becomes enabled
 
 ## How to get to it (user POV)
 

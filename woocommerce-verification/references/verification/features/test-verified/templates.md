@@ -1,6 +1,6 @@
 # Templates
 
-> Status: test-verified on CI-gated trunk revision `aa5308378124f891ed07d230085787ff11e11e97`. The cited tests verify the behavior they assert.
+> Status: test-verified on CI-gated trunk revision `4b6278b7a906da3b102c39b8a70a04ef5233d056`. The cited tests verify the behavior they assert.
 
 ## Sub-features
 
@@ -25,7 +25,6 @@
 - loads the product catalog template after the shop page permalink is updated via REST API
 - loads the theme template for a specific product using the product slug and it can be customized
 - priorities are applied correctly in the ${ testData.templateName } template
-- template selector is not visible in the Page editor
 - theme template has priority over user-modified ${ fallbackTemplate.templateName } template
 - user-modified ${ templateName } template based on the theme template has priority over the user-modified template based on the default WooCommerce template
 - woocommerce//* slug is supported

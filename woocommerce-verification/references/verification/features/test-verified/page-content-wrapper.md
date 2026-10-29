@@ -1,10 +1,11 @@
 # Page Content Wrapper
 
-> Status: test-verified on CI-gated trunk revision `aa5308378124f891ed07d230085787ff11e11e97`. The cited tests verify the behavior they assert.
+> Status: test-verified on CI-gated trunk revision `4b6278b7a906da3b102c39b8a70a04ef5233d056`. The cited tests verify the behavior they assert.
 
 ## Sub-features
 
 - Page Content Wrapper
+- opening the ${ template.title } template in the Site Editor does not enable the Save button
 - the content of the ${ template.title } page is correctly rendered in the ${ template.title } template
 
 ## How to get to it (user POV)

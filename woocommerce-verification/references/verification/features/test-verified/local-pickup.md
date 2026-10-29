@@ -1,12 +1,17 @@
 # Local Pickup
 
-> Status: test-verified on CI-gated trunk revision `aa5308378124f891ed07d230085787ff11e11e97`. The cited tests verify the behavior they assert.
+> Status: test-verified on CI-gated trunk revision `4b6278b7a906da3b102c39b8a70a04ef5233d056`. The cited tests verify the behavior they assert.
 
 ## Sub-features
 
 - Merchant → Local Pickup Settings
-- Merchant can configure Local Pickup general settings
-- Merchant can manage a Local Pickup location lifecycle
+- user can add a new location
+- user can change the title
+- user can delete a location
+- user can edit a location
+- user can edit costs and tax status
+- user can toggle the enabled state
+- user can toggle the price field state
 
 ## How to get to it (user POV)
 
@@ -20,11 +25,7 @@ Source specs:
 
 Candidate test steps:
 
-- Add, save, and reload a pickup location
-- Configure and save the general settings
-- Delete, save, and reload the pickup location
-- Edit, save, and reload the pickup location
-- Reload and confirm the settings persisted
+- Use the source test titles and accessible selectors as the initial drive recipe.
 
 The cited tests prove their asserted behavior on the verified revision. Run the assigned-site user path only when the task depends on visual or manual behavior, mocks, environment-specific behavior, or a claim outside those assertions.
 

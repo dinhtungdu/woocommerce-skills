@@ -1,6 +1,6 @@
 # Order
 
-> Status: test-verified on CI-gated trunk revision `aa5308378124f891ed07d230085787ff11e11e97`. The cited tests verify the behavior they assert.
+> Status: test-verified on CI-gated trunk revision `4b6278b7a906da3b102c39b8a70a04ef5233d056`. The cited tests verify the behavior they assert.
 
 ## Sub-features
 
@@ -15,11 +15,13 @@
 - WooCommerce Orders > Filter Order by Status
 - WooCommerce Orders > Hidden columns on small screens
 - WooCommerce Orders > Refund and restock an order item
+- Keyboard — a text-only row sends focus to its rating and links the error
+- Keyboard — dismissing the disabled-products notice keeps focus on the page
+- Keyboard — submitting moves focus into the thank-you view
+- Reflow — the page fits a 640px and a 320px viewport and stays operable
 - Scenario 1 — happy path: rate a product, submit, see thank-you in place
 - Scenario 2 — refresh after partial submit pre-fills the submitted row
-- Scenario 3 — per-product reviews disabled hides the row and shows the dismissible notice
-- Scenario 4 — order with no reviewable items renders the empty-state thank-you
-- Scenario 6 — typing review text without a rating surfaces the inline error
+- Star control — arrow keys follow the visual order and the fill tracks the selection
 - Variations — submitting one variation leaves the sibling row open (per-variation tracking)
 - Variations — two variations of one parent render two distinct rows with their attribute summaries
 - WP-CLI preserves the pending rewrite flush only when the active theme is skipped
@@ -30,20 +32,22 @@
 - can apply a coupon
 - can bulk update order status
 - can copy billing address to shipping address
+- can create a simple guest order
 - can create an order for an existing customer
-- can delete an issued refund
-- can edit downloadable product permissions
-- can issue a refund by quantity
 
 ## How to get to it (user POV)
 
 - Candidate route: `checkout/order-received/${ order.id }/?key=${ order.order_key }`
 - Candidate route: `wp-admin/admin.php?page=wc-orders`
+- Candidate route: `wp-admin/admin.php?page=wc-orders&action=edit&id=${ doubleClickOrderId }`
 - Candidate route: `wp-admin/admin.php?page=wc-orders&action=edit&id=${ noProductOrderId }`
+- Candidate route: `wp-admin/admin.php?page=wc-orders&action=edit&id=${ order.id }`
 - Candidate route: `wp-admin/admin.php?page=wc-orders&action=edit&id=${ orderId }`
 - Candidate route: `wp-admin/admin.php?page=wc-orders&action=edit&id=${ secondOrderId }`
 - Candidate route: `wp-admin/admin.php?page=wc-orders&action=new`
+- Candidate route: `wp-admin/edit.php?post_type=shop_order`
 - Candidate route: `wp-admin/post.php?post=${ orderId }&action=edit`
+- Candidate route: `wp-admin/post.php?post=${ orderToCancel }&action=edit`
 
 ## Driving it with Playwright
 

@@ -1,11 +1,13 @@
 # Cart Store
 
-> Status: test-verified on CI-gated trunk revision `aa5308378124f891ed07d230085787ff11e11e97`. The cited tests verify the behavior they assert.
+> Status: test-verified on CI-gated trunk revision `4b6278b7a906da3b102c39b8a70a04ef5233d056`. The cited tests verify the behavior they assert.
 
 ## Sub-features
 
 - Add to cart respects cart-line identity
 - Mutation Batcher
+- ProductButton in-cart count
+- as a guest
 - cross-cutting side effects fire once per cycle
 - known-line quantity change (Mini-Cart stepper)
 - variation handling (Add to Cart with Options)
@@ -24,12 +26,19 @@
 - a mixed successful/failed add cycle fires each effect once and preserves the failed item
 - awaited calls produce separate batch requests
 - cart state is correct after batched operations
+- counts a child after its parent is removed from the Mini-Cart
+- counts a child when its declared parent product is drafted
+- counts a child whose declared parent is not in the cart
+- does not count a child cart line in the add to cart button
 - mixed sync and async calls produce expected batch grouping
 - total batch failure rolls back product button UI to pre-failure state
 
 ## How to get to it (user POV)
 
+- Candidate route: `/?add-to-cart=${ capId }`
+- Candidate route: `/?add-to-cart=${ productId }`
 - Candidate route: `/product/v-neck-t-shirt/`
+- Candidate route: `/shop/`
 
 ## Driving it with Playwright
 
@@ -37,6 +46,7 @@ Source specs:
 
 - `plugins/woocommerce/tests/e2e/tests/blocks/cart-store/cart-line-identity.block_theme.spec.ts`
 - `plugins/woocommerce/tests/e2e/tests/blocks/cart-store/mutation-batcher.block_theme.spec.ts`
+- `plugins/woocommerce/tests/e2e/tests/blocks/cart-store/parent-item-key.block_theme.spec.ts`
 
 Candidate test steps:
 

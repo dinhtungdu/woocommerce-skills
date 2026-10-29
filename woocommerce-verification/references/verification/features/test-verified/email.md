@@ -1,6 +1,6 @@
 # Email
 
-> Status: test-verified on CI-gated trunk revision `aa5308378124f891ed07d230085787ff11e11e97`. The cited tests verify the behavior they assert.
+> Status: test-verified on CI-gated trunk revision `4b6278b7a906da3b102c39b8a70a04ef5233d056`. The cited tests verify the behavior they assert.
 
 ## Sub-features
 
@@ -13,8 +13,8 @@
 - Customer should receive an email when initiating a password reset
 - Customer should receive an email when password reset initiated from admin
 - Email listing assets load only where the listing renders
+- Email preview renders, switches type, and updates live when settings change
 - Email settings list view renders correctly and allows to edit email status and search
-- Live preview when changing email settings
 - Merchant can resend order details to customer
 - New customer should receive an email with login details
 - Preview action renders the file template for emails without a saved post

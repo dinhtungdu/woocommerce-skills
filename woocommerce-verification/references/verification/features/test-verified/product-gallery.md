@@ -1,19 +1,18 @@
 # Product Gallery
 
-> Status: test-verified on CI-gated trunk revision `aa5308378124f891ed07d230085787ff11e11e97`. The cited tests verify the behavior they assert.
+> Status: test-verified on CI-gated trunk revision `4b6278b7a906da3b102c39b8a70a04ef5233d056`. The cited tests verify the behavior they assert.
 
 ## Sub-features
 
 - ${ blockData.name }
+- Frontend navigation
 - Product Gallery Thumbnails block
-- Swipe to navigate
 - Zoom while hovering setting
 - block availability
 - open pop-up when clicked option
 - with previous and next buttons
 - with thumbnails
 - within pop-up
-- Renders Product Gallery Viewer block on the editor and frontend side
 - Variable product gallery: classic Add to Cart Form preserves the parent gallery between variations
 - Variable product gallery: featured → variation → cleared
 - block has opinionated layout on mobile
@@ -30,10 +29,11 @@
 - should work on frontend when is enabled
 - thumbnail size settings work correctly
 - thumbnails are scrollable and last thumbnail is reachable
+- updates thumbnail selection during a native swipe
 
 ## How to get to it (user POV)
 
-- Candidate route: `/product/beanie/`
+- Derive the user entry point from the source specs during live verification.
 
 ## Driving it with Playwright
 

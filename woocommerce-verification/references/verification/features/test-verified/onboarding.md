@@ -1,6 +1,6 @@
 # Onboarding
 
-> Status: test-verified on CI-gated trunk revision `aa5308378124f891ed07d230085787ff11e11e97`. The cited tests verify the behavior they assert.
+> Status: test-verified on CI-gated trunk revision `4b6278b7a906da3b102c39b8a70a04ef5233d056`. The cited tests verify the behavior they assert.
 
 ## Sub-features
 
@@ -12,8 +12,10 @@
 - NOX onboarding critical flows
 - Store owner can complete the core profiler
 - Store owner can skip the core profiler
+- Add product task displays options for different product types
+- Allows mobile zoom without automatic input focus zoom (${ businessChoice })
+- Can complete the core profiler installing default extensions
 - Can complete the core profiler skipping extension install
-- Can complete the core profiler with an extension selected
 - Can connect to WooCommerce.com
 - Can hide the task list
 - Can skip the guided setup
@@ -24,6 +26,8 @@
 - Homescreen badge live
 - Payments task list item links to Payments settings page
 - Products page redirects to add product task when no products exist
+- Products page redirects to add product task when no products exist and task list is hidden
+- Products page shows products table when products exist
 - Site visibility settings
 - Store only coming soon mode frontend
 - Store only coming soon mode${ testSuffix }
@@ -41,6 +45,7 @@
 - Candidate route: `wp-admin/admin.php?page=wc-settings&tab=checkout&from=wc_settings_payments`
 - Candidate route: `wp-admin/admin.php?page=wc-settings&tab=site-visibility`
 - Candidate route: `wp-admin/edit.php?post_type=product`
+- Candidate route: `wp-admin/plugins.php`
 - Candidate route: `wp-admin/plugins.php?plugin_status=active`
 
 ## Driving it with Playwright
@@ -57,19 +62,20 @@ Candidate test steps:
 
 - Business Information
 - Check we hand off to WooCommerce.com with a valid OAuth request
+- Clean up installed extensions
+- Confirm that core profiler was completed and a couple of default extensions installed
 - Confirm that core profiler was completed and no extensions installed
 - Confirm that information from core profiler saved
+- Confirm that the store is in coming soon mode after completing the core profiler
 - Confirm that the store is in coming soon mode after skipping the core profiler
-- Confirm the selection was installed and the profiler finished
 - Extensions -- do not install any
+- Extensions -- install some suggested extensions
 - Go to WC Home and make sure the total sales is visible
 - Go to the extensions tab and connect store
 - Hide the task list
 - Intro page and opt in to data sharing
 - Load the WC Admin page.
-- Select one extension and continue
 - User profile information
-- Walk the profiler to the extensions step
 
 The cited tests prove their asserted behavior on the verified revision. Run the assigned-site user path only when the task depends on visual or manual behavior, mocks, environment-specific behavior, or a claim outside those assertions.
 
