@@ -21,6 +21,12 @@ the `woocommerce-review` skill. For PR preparation, read
 the user's prose and template boundaries, use accurate AI disclosure and verified
 issue references, and attach only accepted evidence under the current authority.
 
+Write everything people read in plain English: code comments, test names and
+docblocks, PR titles and descriptions, testing instructions and changelog
+entries. Use short sentences, common words and the code's own names, with no
+jargon or inflated wording. When the `unslop` skill is installed, run it on that
+text before you commit or publish it.
+
 This skill owns project conventions and learnings. GitHub actions follow the
 shared [non-personal repository authority](references/non-personal-authority.md): draft
 PR work and verified AI-feedback handling are allowed. Human communication,
