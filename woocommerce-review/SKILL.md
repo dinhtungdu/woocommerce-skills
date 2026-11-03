@@ -42,11 +42,13 @@ verdict. Missing proof is a coverage gap; a surviving mutation is a test-coverag
 finding. Do not give an unqualified clean review with either unresolved. Improving
 a fixture alone does not satisfy this review requirement.
 
-Inspect actual check outputs and accepted artifacts for the tested revision,
-including identified uncommitted changes. For UI changes, open the screenshots
+Inspect accepted artifacts for the tested revision, including identified
+uncommitted changes. For UI changes, open the screenshots
 and assess whether they prove the visible outcome; flag stale, missing, or
 non-probative evidence. Screenshots do not replace automated checks or verify
 uncaptured feature behavior.
+
+The review belongs to Tung. Help him understand the PR; don't write the review for him. Report findings and evidence for him to read, with no drafted review text, suggested comments or verdict wording to post. If Tung gives you speaking notes, turn them into written text in his voice: light cleanup only, no added points. Skip what the author can already see, such as failing CI checks or lint, and don't say how to fix them. Spend the time on behavior, design and risks a human would miss.
 
 Return actionable findings with stable IDs, location, execution path, impact, and
 evidence; reconcile findings after updates. A clean result is valid. Agent
