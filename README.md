@@ -1,6 +1,6 @@
 # woocommerce-skills
 
-Tung's WooCommerce agent skills, extracted from his Amp personal skills repo at `449c7a5`.
+Tung's WooCommerce agent skills, extracted from his Amp personal skills repo at `5ba36fa`.
 
 - `woocommerce-development`: monorepo development, debugging and PR prep.
 - `woocommerce-review`: review WooCommerce changes for regressions and compatibility.
