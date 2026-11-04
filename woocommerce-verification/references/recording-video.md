@@ -111,6 +111,88 @@ cancellations. Do not treat every `ERR_ABORTED` as harmless. Write failure resul
 and finalize capture in `finally`: close the recording context, then await
 `video.path()`. Do not swallow close/export errors or label a partial take passing.
 
+## Show the URL or browser UI only when needed
+
+By default the demo shows page content only. Add browser chrome only when the
+demo needs it, and use one of these two modes. Disclose the mode in delivery notes.
+
+### URL mode: drawn frame
+
+Use when the URL is part of the result, such as a permalink, query arguments, a
+redirect or an endpoint. Capture headless with `page.screencast` so the
+navigation log and the video share one clock. Then build the composition with
+[browser-frame.mjs](browser-frame.mjs). It draws a tab and address bar that follow
+the logged navigations. The address bar always shows `https://example.com` plus
+the real path, and masks query values whose names look secret. Never show the
+real host. A drawn frame cannot show native dialogs; use the headed mode for those.
+
+```js
+const size = { width: 1440, height: 900 };
+const context = await browser.newContext({ viewport: size });
+const page = await context.newPage();
+let first = 0;
+const nav = [], asserts = [];
+await page.screencast.start({ path: 'raw.webm', size,
+  onFrame: frame => { first ||= frame.timestamp; } }); // Epoch milliseconds.
+while (!first) await page.waitForTimeout(50);
+const at = () => +((Date.now() - first) / 1000).toFixed(3);
+page.on('request', request => {
+  if (request.isNavigationRequest() && request.frame() === page.mainFrame())
+    nav.push({ kind: 'start', t: at(), url: request.url() });
+});
+page.on('framenavigated', frame => {
+  if (frame === page.mainFrame()) nav.push({ kind: 'commit', t: at(), url: frame.url() });
+});
+page.on('load', async () => nav.push({ kind: 'load', t: at(), title: await page.title() }));
+// In the take, push { id, t: at() } to asserts when each assertion passes.
+// In finally: await page.screencast.stop(), then close the context.
+```
+
+Write `take.json` with `nav`, `asserts` and `captions` (format at the top of the
+script), convert `raw.webm` to `source.mp4` as below, then:
+
+```sh
+node "$WOO_VERIFICATION_DIR/references/browser-frame.mjs" take.json <project> \
+  --media-start <first loaded page, s> --duration <raw video length, s>
+```
+
+The script writes `index.html` and `edit-map.json` in place of the copied
+template. Check, snapshot and render it as below. Confirm that every frame's
+address bar and tab title match the page shown, and that the real host never appears.
+
+### Real browser UI: headed Chromium on a virtual display
+
+Use when the demo needs browser UI outside the page: a native `alert`, `confirm`
+or `prompt`, a permission prompt, a download bar or an extension. Headless footage
+never contains these. This mode needs Xvfb and ffmpeg on the host; if either is
+missing, report the blocker. It shows the real host, URL, tab titles and hover
+status bubbles. Use it only on a test site whose URL is safe to publish, use a
+disposable profile, and check every frame for tokens, other tabs and popups.
+
+```js
+const xvfb = spawn('Xvfb', [':99', '-screen', '0', '2016x1400x24', '-nolisten', 'tcp']);
+const env = { ...process.env, DISPLAY: ':99' };
+const context = await chromium.launchPersistentContext(disposableProfileDir, {
+  headless: false, viewport: null, env, ignoreDefaultArgs: ['--enable-automation'],
+  args: ['--window-position=0,0', '--window-size=1440,1000',
+    '--force-device-scale-factor=1.4', '--no-first-run', '--no-default-browser-check'],
+});
+const ffmpeg = spawn('ffmpeg', ['-y', '-f', 'x11grab', '-draw_mouse', '0', '-framerate', '30',
+  '-video_size', '2016x1400', '-i', ':99.0', '-c:v', 'libx264', '-preset', 'ultrafast',
+  '-crf', '12', '-pix_fmt', 'yuv420p', 'raw.mp4'], { env, stdio: ['pipe', 'inherit', 'inherit'] });
+// In finally: ffmpeg.stdin.write('q'), await its exit, close the context, kill Xvfb.
+```
+
+- Scale 1.4 keeps the real address bar readable. Scale the capture to 1440×1000
+  with `-vf scale=1440:1000:flags=lanczos` when making `source.mp4`.
+- Playwright input does not move the X cursor, so keep the pointer overlay and
+  `-draw_mouse 0`.
+- Playwright dismisses dialogs at once unless a handler exists. To show one, use
+  `page.once('dialog', ...)`: hold it for reading, then accept or dismiss it as
+  the user would.
+- There is no frame clock. Measure event and assertion times from ffmpeg start,
+  then confirm each page change against the frames before placing captions.
+
 ## Finish with HyperFrames
 
 Polished demos use this finishing pass by default. Raw capture remains evidence,
@@ -123,8 +205,10 @@ the missing finishing step; do not quietly deliver the old rough style as final.
    `HYPERFRAMES_NO_UPDATE_CHECK=1`. Scaffold with
    `hyperframes init <project> --non-interactive --example=blank --skill=general-video`.
    Do not install global skill packs or upload to analysis/render services.
+   On Linux ARM64, HyperFrames has no bundled browser and tries `apt-get`; set
+   `HYPERFRAMES_BROWSER_PATH` to Playwright's installed `chrome-headless-shell`.
 2. Copy [video-composition.html](video-composition.html) to the project's
-   `index.html`. It frames **real footage**, with a plain background, compact
+   `index.html` (URL mode generates it with `browser-frame.mjs` instead). It frames **real footage**, with a plain background, compact
    captions and a static camera. Supply a local
    `gsap.min.js` from the installed toolchain, or fetch the pinned upstream runtime
    asset `https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js` into this project.
@@ -147,9 +231,13 @@ the missing finishing step; do not quietly deliver the old rough style as final.
    Preserve navigation, status and context needed to understand the result.
    Replace placeholder captions/times: introduce the action before pointer travel,
    switch to the outcome when it appears, and hold only as long as reading needs.
-   Inspect initial source frames; trim blank recording preroll with
-   `data-media-start` and account for that offset in captions and the edit map.
-   Do not restyle app content, fake browser chrome or replay a still as moving UI.
+   Start an outcome caption when its assertion passed, not at a guessed second;
+   loading placeholders can hold for seconds after navigation.
+   Inspect initial source frames; trim preroll with `data-media-start` until the
+   first asserted page has loaded, and account for that offset in captions and
+   the edit map. Do not restyle app content or replay a still as moving UI. Add
+   browser chrome only through the modes in
+   [Show the URL or browser UI](#show-the-url-or-browser-ui-only-when-needed).
 5. Keep the camera still by default. A zoom that does not make a necessary detail
    readable is just distraction. If focus needs to change, use one eased move over
    600–900ms, finish before pointer travel, then hold through the result. Choose the
@@ -199,6 +287,8 @@ the missing finishing step; do not quietly deliver the old rough style as final.
 
 - [Playwright video](https://playwright.dev/docs/videos): recording dimensions and
   finalization. Video is not itself an assertion log.
+- [Playwright screencast](https://playwright.dev/docs/api/class-screencast): exact
+  start/stop and per-frame timestamps for the URL mode navigation log.
 - [Paralect product demo](https://www.paralect.com/skills/product-demo): useful
   cursor acquisition, dwell, uncluttered framing and posters. Do not inherit its
   iframe capture, independent CSS-clock retuning or product CSS alterations.
