@@ -278,6 +278,10 @@ the missing finishing step; do not quietly deliver the old rough style as final.
   click, captions covering controls, blank/missing media, a black opening or an
   outcome too brief to read. Fix capture pacing when source is bad; don't hide it
   with interpolation. Check diagnostic failures separately from visual quality.
+- Before any video goes public, check every frame for the real site host or IP
+  anywhere on screen, not only the address bar: permalink fields, page text, links,
+  REST responses and admin notices. If it shows, re-record on a site whose URL is
+  safe to publish or blur it, and tell the user before posting.
 - Deliver the inspected H.264/yuv420p fast-start MP4 and a poster from a real result
   frame, plus the take script, edit map, results, render log and exact rerender
   command. Keep raw media and private evidence task-local. Use the owning project's
