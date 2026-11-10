@@ -43,5 +43,6 @@ Advisory routing index. Current user intent, repository instructions, current ha
 - PR drafting/publication/update or browser evidence: [pull-request-and-evidence.md](pull-request-and-evidence.md)
 - Browser execution details only: `references/browser-evidence.md` in the `woocommerce-verification` skill and `references/browser-harness/README.md` in the `woocommerce-verification` skill
 - Known facts only when changed surface intersects them: [compatibility-facts.md](compatibility-facts.md)
+- Code, hooks or front-end contracts other plugins use: [extension-breakage.md](extension-breakage.md)
 
 Do not read every linked file by default.

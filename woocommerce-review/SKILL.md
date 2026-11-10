@@ -16,7 +16,9 @@ installed `interrogate` skill and its
 then [WooCommerce reviewer lessons](references/roles/reviewer.md). Use
 development context (`references/INDEX.md` in the `woocommerce-development` skill) and
 compatibility facts (`references/compatibility-facts.md` in the `woocommerce-development` skill)
-only for the changed surface.
+only for the changed surface. When the PR changes code, hooks or front-end
+contracts other plugins use, apply `references/extension-breakage.md` in the
+`woocommerce-development` skill and report the plugins its search found.
 
 For runnable changes, judge the evidence against
 the `woocommerce-verification` skill on the exact

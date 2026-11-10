@@ -12,6 +12,9 @@ Load the installed `poteto-mode` for the shared workflow and read
 [the project index](references/INDEX.md) for WooCommerce context. Load only
 [compatibility facts](references/compatibility-facts.md) and
 [developer lessons](references/roles/dev.md) relevant to the changed surface.
+When the change touches code, hooks or front-end contracts other plugins use,
+read [changes that break other plugins](references/extension-breakage.md) and
+run its search before you open the PR.
 Read [explorer lessons](references/roles/explorer.md) for a grounded investigation.
 
 For runnable behavior, use the `woocommerce-verification` skill
